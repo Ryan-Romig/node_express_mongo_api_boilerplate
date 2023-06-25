@@ -3,7 +3,6 @@ require('dotenv-expand').expand(require('dotenv').config({path:'../.env'}))
 const secrets = {
   dbUri: process.env.DB_URI || '',
   port: process.env.PORT || 3000
-
 };
 const secretNames = {
   dbUri:'dbUri',
