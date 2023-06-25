@@ -1,7 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
-require('dotenv').config()
+
 const cors = require('cors')
 
 const { secretNames, getSecret } = require('./secrets');
@@ -11,6 +11,7 @@ const dataRoute = require('./routes/data');
 
 //mongoDB
 mongoose.Promise = global.Promise;
+console.log(getSecret(secretNames.dbUri))
 mongoose.connect(getSecret(secretNames.dbUri)).then(
   () => {
     console.log('Connected to mongoDB');

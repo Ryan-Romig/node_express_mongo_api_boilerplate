@@ -1,4 +1,4 @@
-require('dotenv-expand').expand(require('dotenv').config())
+require('dotenv-expand').expand(require('dotenv').config({path:'../.env'}))
 
 const secrets = {
   dbUri: process.env.DB_URI || '',
