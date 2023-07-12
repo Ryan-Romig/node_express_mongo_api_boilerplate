@@ -1,11 +1,5 @@
-# Setting Up MongoDB server
+# Setting Up MongoDB server ubuntu server 22.04
 
-## Steps:
-1. installing mongoDB onto linux server
-2. 
-
-
-# 1. Installing MongoDB
 ### Step 1. install package manager and import the key
 ```bash 
 sudo apt-get install gnupg &&
@@ -42,7 +36,7 @@ use admin
 ```
 #### step 5c. add user
 ```mongo
-db.createUser({user:"admin", pwd:"yourNewPassword",roles["userAdminAnyDatabase","dbAdminAnyDatabase","readWriteAnyDatabase"]})
+db.createUser({user:"admin", pwd:"yourNewPassword",roles:["userAdminAnyDatabase","dbAdminAnyDatabase","readWriteAnyDatabase"]})
 ```
 then exit
 ```
@@ -56,7 +50,7 @@ change the ip address in ```bindIp``` to ```0.0.0.0```
 change the line that says ```#security:``` to 
 ```yaml
 security:
-  authentication: enabled
+  authorization: enabled
 ```
 note the empty space after each colon is required. two spaces for indention is also required
 ### Step 6. Restart MongoDB
