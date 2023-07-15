@@ -4,8 +4,8 @@
 #### * for hosting mongodb server locally see `setup-mongodb.md` for how to
 ####
 ### * Run the `create-dotenv-file.sh` script to create the .env file
-### npm i to install the NPM packages
-### npm run startServer to start the server
+### ```code npm i``` to install the NPM packages
+### ```code npm run startServer``` to start the server
 
 #### app folder is parent folder
 * `/models/` folder
